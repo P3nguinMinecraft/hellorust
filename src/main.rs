@@ -6,11 +6,15 @@ Install rust on your machine, cargo is bundled
 `cargo build` to build the project, `cargo run` to run the project
 */
 use std::io;
-use rand::random_range;
+use 
+rand::random_range;
 
 mod guess_game; // imports the guess_game module
 mod pack1;
 mod pack2;
+mod functions;
+mod datatypes;
+mod control;
 
 fn main() {
     /*
@@ -97,50 +101,66 @@ fn main() {
     // println!("The random number is: {}", number);
 
     /*
-    For loops
-    Rust ranges and for loop syntax
-    */
-
-    // // we use _ to indicate that the variable is unused
-    // let _ = 1..5; // 1 inclusive to 5 exclusive
-    // let _ = 1..=5; // 1 inclusive to 5 inclusive
-    // let _ = (1..=5).rev(); // 5 inclusive to 1 inclusive in reverse
-    
-    // for i in 1..=5 {
-    //     println!("i: {}", i);
-    // }
-
-    // for j in (1..=5).rev() {
-    //     println!("j: {}", j);
-    // }
-
-    /*
-    Other functions
-    */
-
-    println!("5 + 10 = {}", add(5, 10));
-    println!("5 + 10 = {}", add2(5, 10));
-
-    /*
     Guessing game
-    refer to guess_game.rs
+    refer to guess_game.rs for the implementation, we just call the run function from the module
     */
 
-    guess_game::run();
+    // guess_game::run();
 
-    pack1::say_hi::hi();
-    pack1::say_bye::bye();
+    /*
+    Importing packages
+    /pack1 and /pack2
+    */
 
-    pack2::one::one();
-    pack2::two::two();
-}
+    // pack1::say_hi::hi();
+    // pack1::say_bye::bye();
 
+    // pack2::one::one();
+    // pack2::two::two();
 
-fn add(x: i32, y: i32) -> i32 { // function that takes two i32 parameters and returns an i32
-    x + y
-}
+    /*
+    Variables
+    */
 
-fn add2(x: i16, y: i32) -> i32 { // overloading does not exist, must use different name
-    return x as i32 + y // we can use type casting to convert x to i32, can also use return keyword
+    // datatypes::vars::shadowing();
+    // datatypes::vars::constants();
+    // datatypes::vars::scope();
+    // datatypes::vars::types();
+    // datatypes::vars::math();
+
+    /*
+    Data types
+    */
+
+    // datatypes::types::tuples();
+    // datatypes::types::arrays();
+
+    /*
+    Functions
+    */
+
+    functions::functions::main();
+
+    /*
+    Expressions
+    */
+    
+    functions::expressions::main();
+
+    /*
+    if else
+    */
+
+    // control::conditional::main();
+
+    /*
+    Loop
+    */
+
+    // control::loops::inf_loop();
+    // control::loops::break_loop();
+    // control::loops::while_loop();
+    // control::loops::for_loop();
+
 }
 
