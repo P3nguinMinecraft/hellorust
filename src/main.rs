@@ -6,8 +6,7 @@ Install rust on your machine, cargo is bundled
 `cargo build` to build the project, `cargo run` to run the project
 */
 use std::io;
-use 
-rand::random_range;
+use rand::random_range;
 
 mod guess_game; // imports the guess_game module
 mod pack1;
@@ -139,13 +138,13 @@ fn main() {
     Functions
     */
 
-    functions::functions::main();
+    // functions::functions::main();
 
     /*
     Expressions
     */
     
-    functions::expressions::main();
+    // functions::expressions::main();
 
     /*
     if else
