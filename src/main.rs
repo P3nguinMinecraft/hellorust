@@ -5,9 +5,12 @@ Install rust on your machine, cargo is bundled
 
 `cargo build` to build the project, `cargo run` to run the project
 */
-
 use std::io;
 use rand::random_range;
+
+mod guess_game; // imports the guess_game module
+mod pack1;
+mod pack2;
 
 fn main() {
     /*
@@ -111,6 +114,33 @@ fn main() {
     //     println!("j: {}", j);
     // }
 
-    
+    /*
+    Other functions
+    */
 
+    println!("5 + 10 = {}", add(5, 10));
+    println!("5 + 10 = {}", add2(5, 10));
+
+    /*
+    Guessing game
+    refer to guess_game.rs
+    */
+
+    guess_game::run();
+
+    pack1::say_hi::hi();
+    pack1::say_bye::bye();
+
+    pack2::one::one();
+    pack2::two::two();
 }
+
+
+fn add(x: i32, y: i32) -> i32 { // function that takes two i32 parameters and returns an i32
+    x + y
+}
+
+fn add2(x: i16, y: i32) -> i32 { // overloading does not exist, must use different name
+    return x as i32 + y // we can use type casting to convert x to i32, can also use return keyword
+}
+
